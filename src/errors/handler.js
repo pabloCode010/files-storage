@@ -1,5 +1,5 @@
 module.exports = function(err, req, res, next){
-    console.log(err);
+    // console.log(err);
     if (err.isBoom){
         const { statusCode } = err.output.payload;
         return res.status(statusCode).json(err.output.payload);
